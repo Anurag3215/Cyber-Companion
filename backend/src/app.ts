@@ -24,7 +24,10 @@ app.get('/health', (req: Request, res: Response) => {
 });
 
 import threatRoutes from './routes/threatRoutes';
+import scoringRoutes from './routes/scoringRoutes';
+
 app.use('/api/threats', threatRoutes);
+app.use('/api/score', scoringRoutes);
 
 // Global Error Handler
 app.use(errorHandler);

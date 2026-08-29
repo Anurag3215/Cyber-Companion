@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Platform } from "react-native";
 
-// Use 10.0.2.2 for Android emulator to access localhost, or localhost for web/ios
-const API_URL = Platform.OS === "android" ? "http://10.0.2.2:5000/api" : "http://localhost:5000/api";
+// Updated to your local Wi-Fi IP address so the APK on your phone can connect!
+const API_URL = "http://192.168.84.108:5000/api";
 
 export const scanUrl = async (url: string) => {
     const res = await axios.post(`${API_URL}/scan/url`, { url });

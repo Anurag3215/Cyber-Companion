@@ -18,11 +18,21 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anuragts.frontend",
+      "permissions": ["CAMERA"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Cyber Companion to access your camera."
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "6a9b94e0-4192-46c5-9dbc-10cae040fcb5"

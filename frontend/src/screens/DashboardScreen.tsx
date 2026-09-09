@@ -1,7 +1,8 @@
 import React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
-import { Card, Title, Paragraph, Button } from "react-native-paper";
+import { Card, Title, Paragraph } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export const DashboardScreen = () => {
   const navigation = useNavigation<any>();
@@ -11,38 +12,43 @@ export const DashboardScreen = () => {
       <Title style={styles.mainTitle}>Cyber Companion</Title>
 
       <Card style={styles.card} onPress={() => navigation.navigate("SecurityScore")}>
-        <Card.Content>
-          <Title>Security Score</Title>
-          <Paragraph>Overall device safety rating.</Paragraph>
-        </Card.Content>
+        <Card.Title 
+          title="Security Score" 
+          subtitle="Overall device safety rating."
+          left={(props) => <MaterialCommunityIcons {...props} name="shield-check" size={24} color="#005a9c" />}
+        />
       </Card>
 
       <Card style={styles.card} onPress={() => navigation.navigate("WifiAnalyzer")}>
-        <Card.Content>
-          <Title>Wi-Fi Risk Analyzer</Title>
-          <Paragraph>Evaluate current network safety.</Paragraph>
-        </Card.Content>
+        <Card.Title 
+          title="Wi-Fi Risk Analyzer" 
+          subtitle="Evaluate current network safety."
+          left={(props) => <MaterialCommunityIcons {...props} name="wifi-strength-lock-outline" size={24} color="#005a9c" />}
+        />
       </Card>
 
       <Card style={styles.card} onPress={() => navigation.navigate("UrlScanner")}>
-        <Card.Content>
-          <Title>URL Scanner</Title>
-          <Paragraph>Check links for phishing and malware.</Paragraph>
-        </Card.Content>
+        <Card.Title 
+          title="URL Scanner" 
+          subtitle="Check links for phishing and malware."
+          left={(props) => <MaterialCommunityIcons {...props} name="link-lock" size={24} color="#005a9c" />}
+        />
       </Card>
 
       <Card style={styles.card} onPress={() => navigation.navigate("QrScanner")}>
-        <Card.Content>
-          <Title>QR Scanner</Title>
-          <Paragraph>Safely scan and analyze QR codes.</Paragraph>
-        </Card.Content>
+        <Card.Title 
+          title="QR Scanner" 
+          subtitle="Safely scan and analyze QR codes."
+          left={(props) => <MaterialCommunityIcons {...props} name="qrcode-scan" size={24} color="#005a9c" />}
+        />
       </Card>
 
       <Card style={styles.card} onPress={() => navigation.navigate("PermissionAnalyzer")}>
-        <Card.Content>
-          <Title>Permission Analyzer</Title>
-          <Paragraph>Audit app permissions and privacy risks.</Paragraph>
-        </Card.Content>
+        <Card.Title 
+          title="Permission Analyzer" 
+          subtitle="Audit app permissions and privacy risks."
+          left={(props) => <MaterialCommunityIcons {...props} name="cellphone-key" size={24} color="#005a9c" />}
+        />
       </Card>
       
       <View style={styles.footer} />

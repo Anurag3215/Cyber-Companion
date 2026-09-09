@@ -19,8 +19,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anuragts.frontend",
-      "permissions": ["CAMERA"]
+      "package": "com.anuragts.frontend"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,7 +30,8 @@
         {
           "cameraPermission": "Allow Cyber Companion to access your camera."
         }
-      ]
+      ],
+      "expo-font"
     ],
     "extra": {
       "eas": {
